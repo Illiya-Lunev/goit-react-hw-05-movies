@@ -1,10 +1,12 @@
+import Container from './componets/Container/Container';
+import AppBar from './componets/AppBar/AppBar';
+import { Switch, Route } from 'react-router-dom';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <h1>React</h1>
-    </div>
+    <Container>
+      <AppBar />
+      <Route path="/"></Route>
+    </Container>
   );
 }
-
-export default App;
