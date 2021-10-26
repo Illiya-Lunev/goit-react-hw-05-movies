@@ -23,7 +23,9 @@ export default function Reviews() {
         </ul>
       )}
       {reviews && reviews.length === 0 && (
-        <p> We don't have any reviews for this movie</p>
+        <p className={s.reviews_error}>
+          We don't have any reviews for this movie
+        </p>
       )}
     </>
   );

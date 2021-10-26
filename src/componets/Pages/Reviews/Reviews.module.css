@@ -1,3 +1,9 @@
 .reviews_list {
   list-style: none;
 }
+
+.reviews_error {
+  color: red;
+  font-weight: 900;
+  text-align: center;
+}
