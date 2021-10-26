@@ -42,7 +42,7 @@ export default function MovieDetailsPage() {
               <h2 className={s.title}>
                 {movie.title} ({movie.release_date.substr(0, 4)})
               </h2>
-              <span> Vote / Votes: {movie.vote_average}</span>
+              <span> User Scores: {movie.vote_average}</span>
               <h3 className={s.overview}>
                 Overview:
                 <span>{movie.overview} </span>
