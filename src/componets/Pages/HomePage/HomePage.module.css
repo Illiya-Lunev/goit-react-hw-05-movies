@@ -1,0 +1,17 @@
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.films_list {
+  list-style: none;
+}
+
+.films_link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.12;
+  letter-spacing: 0.02em;
+  color: darkred;
+}

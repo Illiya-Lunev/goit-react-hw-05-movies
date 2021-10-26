@@ -1,32 +1,59 @@
-import Container from './componets/Container/Container';
+import Container from './componets/Container/Containier';
 import AppBar from './componets/AppBar/AppBar';
 import { Switch, Route } from 'react-router-dom';
-import HomePageView from './componets/Pages/View/HomePageView';
-import MovieDetailsPageViews from './componets/Pages/View/MovieDetailsPageViews';
-import MoviesPageView from './componets/Pages/View/MoviesPageView';
-import NotFoundViews from './componets/Pages/View/NotFoundViews';
+import Loader from './componets/Loader/Loader';
+import { lazy, Suspense } from 'react';
+
+const HomePageView = lazy(() =>
+  import(
+    './componets/Pages/View/HomePageView.js' /* webpackChunkName: "home-page" */
+  ),
+);
+
+const MoviesPageView = lazy(() =>
+  import(
+    './componets/Pages/View/MoviesPageView' /* webpackChunkName: "movies-page" */
+  ),
+);
+
+const MovieDetailsPageViews = lazy(() =>
+  import(
+    './componets/Pages/View/MovieDetailsPageViews' /* webpackChunkName: "movie-details-page" */
+  ),
+);
+
+const NotFoundViews = lazy(() =>
+  import(
+    './componets/Pages/View/NotFoundViews' /* webpackChunkName: "not-found-page" */
+  ),
+);
 
 export default function App() {
   return (
     <Container>
       <AppBar />
-      <Switch>
-        <Route exact path="/">
-          <HomePageView />
-        </Route>
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route exact path="/">
+            <HomePageView />
+          </Route>
 
-        <Route path="/movies">
-          <MoviesPageView />
-        </Route>
+          <Route path="/movies" exact>
+            <MoviesPageView />
+          </Route>
 
-        <Route path="/movies/:movieId">
-          <MovieDetailsPageViews />
-        </Route>
+          <Route path="/movies/:movieId">
+            <MovieDetailsPageViews />
+          </Route>
 
-        <Route>
-          <NotFoundViews />
-        </Route>
-      </Switch>
+          <Route path="/error" exact>
+            <NotFoundViews />
+          </Route>
+          <Route>
+            <NotFoundViews />
+          </Route>
+        </Switch>
+      </Suspense>
     </Container>
   );
 }

@@ -1,0 +1,12 @@
+.cast_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+
+  list-style: none;
+}
+
+.card_container {
+  margin-right: 15px;
+  text-align: center;
+}

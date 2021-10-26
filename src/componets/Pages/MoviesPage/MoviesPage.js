@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import * as ApiService from '../../../Service/ApiService';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
 import s from './moviesPage.module.css';
 
 export default function MoviesPage() {
-  const [query, setQuery] = useState('');
   const history = useHistory();
   const location = useLocation();
+  const [query, setQuery] = useState('');
+
   const [inputQuery, setInputQuery] = useState('');
   const [movies, setMovies] = useState(null);
 
@@ -21,6 +21,7 @@ export default function MoviesPage() {
     if (query === '') {
       return;
     }
+
     ApiService.fetchMovies({ query }).then(data => setMovies(data.results));
     history.push({ ...location, search: `query=${query}` });
     // eslint-disable-next-line react-hooks/exhaustive-deps
