@@ -44,3 +44,17 @@
 .genre {
   margin-left: 5px;
 }
+
+.link {
+  text-decoration: none;
+  padding: 12px;
+  text-align: center;
+  font-weight: 500;
+  color: #2a363b;
+  font-size: 18px;
+}
+
+.activeLink {
+  composes: link;
+  color: #2196f3;
+}

@@ -2,6 +2,7 @@ import MovieDetailsPage from '../MovieDetailsPage/MovieDetailsPage';
 import { lazy, Suspense } from 'react';
 import { useLocation, useRouteMatch, Route, NavLink } from 'react-router-dom';
 import Loader from '../../Loader/Loader';
+import s from '../MovieDetailsPage/movieDetailsPage.module.css';
 
 const CastView = lazy(() =>
   import('./CastView.js' /* webpackChunkName: "cast" */),
@@ -21,6 +22,8 @@ export default function MovieDetailsPageViews() {
       <div>
         <h2>Additional information</h2>
         <NavLink
+          className={s.link}
+          activeClassName={s.activeLink}
           to={{
             pathname: `${url}/cast`,
             state: { from: location.state?.from || '/' },
@@ -29,6 +32,8 @@ export default function MovieDetailsPageViews() {
           Cast
         </NavLink>
         <NavLink
+          className={s.link}
+          activeClassName={s.activeLink}
           to={{
             pathname: `${url}/reviews`,
             state: { from: location.state?.from || '/' },
