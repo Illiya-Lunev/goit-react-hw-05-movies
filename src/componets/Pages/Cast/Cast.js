@@ -24,7 +24,6 @@ export default function Cast() {
                   alt={item.title}
                 />
                 <h3>{item.name}</h3>
-                <p>Character: {item.character}</p>
               </div>
             </li>
           ))}
