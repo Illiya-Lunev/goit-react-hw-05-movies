@@ -16,8 +16,8 @@ export default function Cast() {
     <>
       {cast && (
         <ul className={s.cast_list}>
-          {cast.slice(0, 5).map(item => (
-            <li key={item.id}>
+          {cast.slice(0).map(item => (
+            <li className={s.item} key={item.id}>
               <div className={s.card_container}>
                 <img
                   src={'https://image.tmdb.org/t/p/w200' + item.profile_path}
