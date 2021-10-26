@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, useHistory, Redirect } from 'react-router-dom';
+import s from './movieDetailsPage.module.css';
 
 import * as ApiService from '../../../Service/ApiService';
 
@@ -24,27 +25,31 @@ export default function MovieDetailsPage() {
       {error && <Redirect to="/error" />}
       {movie && (
         <div>
-          <button type="button" onClick={handleGoBackClick}>
+          <button
+            className={s.button}
+            type="button"
+            onClick={handleGoBackClick}
+          >
             Go Back
           </button>
-          <div>
+          <div className={s.card_container}>
             <img
               src={'https://image.tmdb.org/t/p/w300' + movie.poster_path}
               alt={movie.title}
             />
 
-            <div>
-              <h2>
+            <div className={s.card}>
+              <h2 className={s.title}>
                 {movie.title} ({movie.release_date.substr(0, 4)})
               </h2>
-              <span> User score: {movie.vote_average}</span>
-              <h3>
+              <span> Vote / Votes: {movie.vote_average}</span>
+              <h3 className={s.overview}>
                 Overview:
                 <span>{movie.overview} </span>
               </h3>
-              <h4>
+              <h4 className={s.overview}>
                 Genres:
-                <span>
+                <span className={s.genre}>
                   {movie.genres.slice(0, 3).map(genre => {
                     return `${genre.name} `;
                   })}

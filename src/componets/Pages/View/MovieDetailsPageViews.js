@@ -17,7 +17,7 @@ export default function MovieDetailsPageViews() {
 
   return (
     <>
-      <MovieDetailsPage />;
+      <MovieDetailsPage />
       <div>
         <h2>Additional information</h2>
         <NavLink
