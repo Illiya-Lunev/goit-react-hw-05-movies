@@ -16,7 +16,7 @@ export default function Cast() {
     <>
       {cast && (
         <ul className={s.cast_list}>
-          {cast.slice(0).map(item => (
+          {cast.slice(0, 10).map(item => (
             <li className={s.item} key={item.id}>
               <div className={s.card_container}>
                 <img
