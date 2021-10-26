@@ -19,7 +19,7 @@ export default function MovieDetailsPageViews() {
   return (
     <>
       <MovieDetailsPage />
-      <div>
+      <div className={s.card_link}>
         <h2>Additional information</h2>
         <NavLink
           className={s.link}

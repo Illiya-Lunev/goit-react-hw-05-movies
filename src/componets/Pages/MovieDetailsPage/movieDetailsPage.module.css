@@ -1,7 +1,7 @@
 .button {
   position: absolute;
   top: 25px;
-  left: 55px;
+  left: 65px;
   height: 35px;
   min-width: 90px;
   text-align: center;
@@ -57,4 +57,10 @@
 .activeLink {
   composes: link;
   color: #2196f3;
+}
+
+.card_link {
+  position: absolute;
+  top: 65%;
+  left: 30%;
 }
