@@ -55,12 +55,13 @@ export default function MoviesPage() {
           Search
         </button>
       </form>
-      <ul>
+      <ul className={s.films_list}>
         {movies &&
           movies.map(movie => {
             return (
               <li key={movie.id}>
                 <Link
+                  className={s.films_link}
                   to={{
                     pathname: `/movies/${movie.id}`,
                     state: { from: location },
