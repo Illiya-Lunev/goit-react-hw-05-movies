@@ -24,6 +24,7 @@
 }
 
 .card_container {
+  position: absolute;
   display: flex;
   max-width: 900px;
   padding: 15px;
@@ -60,7 +61,7 @@
 }
 
 .card_link {
-  position: absolute;
-  top: 65%;
+  position: relative;
+  top: 380px;
   left: 30%;
 }
