@@ -1,7 +1,7 @@
 import MovieDetailsPage from '../MovieDetailsPage/MovieDetailsPage';
 import { lazy, Suspense } from 'react';
 import { useLocation, useRouteMatch, Route, NavLink } from 'react-router-dom';
-import Loader from '../../Loader/Loader';
+import Loader from '../../componets/Loader/Loader';
 import s from '../MovieDetailsPage/movieDetailsPage.module.css';
 
 const CastView = lazy(() =>

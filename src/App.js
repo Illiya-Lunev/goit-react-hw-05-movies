@@ -5,27 +5,21 @@ import Loader from './componets/Loader/Loader';
 import { lazy, Suspense } from 'react';
 
 const HomePageView = lazy(() =>
-  import(
-    './componets/Pages/View/HomePageView.js' /* webpackChunkName: "home-page" */
-  ),
+  import('./pages/View/HomePageView' /* webpackChunkName: "home-page" */),
 );
 
 const MoviesPageView = lazy(() =>
-  import(
-    './componets/Pages/View/MoviesPageView' /* webpackChunkName: "movies-page" */
-  ),
+  import('./pages/View/MoviesPageView' /* webpackChunkName: "movies-page" */),
 );
 
 const MovieDetailsPageViews = lazy(() =>
   import(
-    './componets/Pages/View/MovieDetailsPageViews' /* webpackChunkName: "movie-details-page" */
+    './pages/View/MovieDetailsPageViews' /* webpackChunkName: "movie-details-page" */
   ),
 );
 
 const NotFoundViews = lazy(() =>
-  import(
-    './componets/Pages/View/NotFoundViews' /* webpackChunkName: "not-found-page" */
-  ),
+  import('./pages/View/NotFoundViews' /* webpackChunkName: "not-found-page" */),
 );
 
 export default function App() {

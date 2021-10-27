@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, useLocation, useHistory, Redirect } from 'react-router-dom';
 import s from './movieDetailsPage.module.css';
 
-import * as ApiService from '../../../Service/ApiService';
+import * as ApiService from '../../service/ApiService';
 
 export default function MovieDetailsPage() {
   const history = useHistory();
