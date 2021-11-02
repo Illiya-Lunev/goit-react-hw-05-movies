@@ -59,7 +59,7 @@ export default function MoviesPage() {
         {movies &&
           movies.map(movie => {
             return (
-              <li key={movie.id}>
+              <li className={s.films_item} key={movie.id}>
                 <Link
                   className={s.films_link}
                   to={{
@@ -67,7 +67,12 @@ export default function MoviesPage() {
                     state: { from: location },
                   }}
                 >
-                  {movie.title}
+                  <img
+                    className={s.films_poster}
+                    src={'https://image.tmdb.org/t/p/w200' + movie.poster_path}
+                    alt={movie.title}
+                    width="240"
+                  ></img>
                 </Link>
               </li>
             );
