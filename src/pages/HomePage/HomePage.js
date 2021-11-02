@@ -25,7 +25,12 @@ export default function HomePage() {
                   state: { from: location },
                 }}
               >
-                {trend.title}
+                <img
+                  className={s.films_poster}
+                  src={'https://image.tmdb.org/t/p/w200' + trend.poster_path}
+                  alt={trend.title}
+                  width="240"
+                ></img>
               </Link>
             </li>
           ))}

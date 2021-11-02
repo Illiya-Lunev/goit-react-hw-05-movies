@@ -5,12 +5,17 @@
 
 .films_list {
   list-style: none;
+  width: 1280px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding-left: 0;
 }
 
 .films_link {
   display: block;
   text-align: center;
-  margin-bottom: 8px;
 
   text-decoration: none;
   font-weight: 500;
@@ -18,4 +23,22 @@
   line-height: 1.12;
   letter-spacing: 0.02em;
   color: darkred;
+}
+
+.films_item {
+  margin: 10px;
+  display: block;
+}
+
+.films_item:hover {
+  cursor: pointer;
+  box-shadow: 10px 10px 10px #2196f3;
+  transition: box-shadow linear 150ms;
+  scale: 1.1;
+}
+
+.films_poster {
+  display: block;
+  width: 274px;
+  height: 398px;
 }
